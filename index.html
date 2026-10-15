@@ -775,24 +775,24 @@
             { id: 22, title: "Pomodoro Terrarium", description: "Grow a voxel garden while you focus", category: "productivity", url: "https://dalecri.github.io/pomodoro-terrarium/" },
             { id: 23, title: "Voxel Worlds", description: "Build little worlds with flowing water and lava", category: "interactive", url: "https://dalecri.github.io/voxel-worlds/" },
             { id: 1, title: "Lamplight", description: "Your cozy RSVP Library", category: "productivity", url: "https://dalecri.github.io/Lamplight/" },
-            { id: 19, title: "The Office Todo", description: "Todo App, but make it The Office", category: "interactive", url: "https://dalecri.github.io/Office-Kanban-Board/" },
+            { id: 19, title: "The Office Todo", description: "Todo App, but make it The Office", category: "interactive", url: "https://dalecri.github.io/Office-Kanban-Board/", preview: "assets/previews/office-todo.png" },
             { id: 6, title: "Typerrium", description: "Grow digital flora through speed and precision", category: "interactive", url: "https://dalecri.github.io/typing-speed-terrarium/" },
             { id: 10, title: "Prettycode", description: "Export beautiful code snippets", category: "productivity", url: "https://dalecri.github.io/nimbus-code-beautifier/" },
             { id: 16, title: "TyQuest", description: "Life is but a game!", category: "productivity", url: "https://dalecri.github.io/tyquest/" },
             { id: 4, title: "GardenDo", description: "Garden Voxel-inspired Todo App", category: "interactive", url: "https://dalecri.github.io/japanese-voxel-todo/" },
-            { id: 9, title: "Wordnest", description: "Practice your french", category: "productivity", url: "https://dalecri.github.io/Wordnest/" },
+            { id: 9, title: "Wordnest", description: "Practice your french", category: "productivity", url: "https://dalecri.github.io/Wordnest/", preview: "assets/previews/wordnest.png" },
             { id: 12, title: "Polygrade", description: "Minimalist canvas for low-fidelity art", category: "art", url: "https://dalecri.github.io/polygon-wallpaper-generator/" },
             { id: 13, title: "Cryptogotchi", description: "Nurture your digital security companion", category: "productivity", url: "https://dalecri.github.io/tamagotchi-password-gen/" },
             { id: 15, title: "Retro Rubic", description: "A tactile 3D geometric puzzle classic", category: "game", url: "https://dalecri.github.io/rubics-cube/" },
             { id: 17, title: "Loop Forge", description: "Grid to Strudel Code", category: "interactive", url: "https://dalecri.github.io/Loop-Forge/" },
             { id: 18, title: "Style Guide", description: "My Style Guide", category: "interactive", url: "https://dalecri.github.io/my-portfolio/" },
-            { id: 7, title: "Maple QR", description: "Geometric floral QR generator", category: "productivity", url: "https://dalecri.github.io/QR-Code-generator/" },
-            { id: 20, title: "Little Folders", description: "A digital space to collect your thoughts", category: "productivity", url: "https://dalecri.github.io/little-folders/" },
+            { id: 7, title: "Maple QR", description: "Geometric floral QR generator", category: "productivity", url: "https://dalecri.github.io/QR-Code-generator/", preview: "assets/previews/maple-qr.png" },
+            { id: 20, title: "Little Folders", description: "A digital space to collect your thoughts", category: "productivity", url: "https://dalecri.github.io/little-folders/", preview: "assets/previews/little-folders.png" },
             { id: 5, title: "StardDo", description: "Labelle-inspired Voxel Todo App", category: "interactive", url: "https://dalecri.github.io/voxel-city-river/" },
-            { id: 11, title: "CubeWall", description: "Prismatic cube-grid wallpaper studio", category: "art", url: "https://dalecri.github.io/isometric-cube-wallpaper-generator/" },
+            { id: 11, title: "CubeWall", description: "Prismatic cube-grid wallpaper studio", category: "art", url: "https://dalecri.github.io/isometric-cube-wallpaper-generator/", preview: "assets/previews/cubewall.png" },
             { id: 14, title: "Cozy 2048", description: "Soft-palette numerical merging", category: "game", url: "https://dalecri.github.io/cozy-2048/" },
-            { id: 21, title: "Lofi Rooms", description: "Build and decorate cozy voxel rooms", category: "interactive", url: "https://dalecri.github.io/Voxel-lofi-room/" },
-            { id: 24, title: "TwoStoryCaptions", description: "Plan, organize and save social captions", category: "productivity", url: "https://dalecri.github.io/Twostorycaptions/" },
+            { id: 21, title: "Lofi Rooms", description: "Build and decorate cozy voxel rooms", category: "interactive", url: "https://dalecri.github.io/Voxel-lofi-room/", preview: "assets/previews/lofi-rooms.png" },
+            { id: 24, title: "TwoStoryCaptions", description: "Plan, organize and save social captions", category: "productivity", url: "https://dalecri.github.io/Twostorycaptions/", preview: "assets/previews/twostorycaptions.png" },
             { id: 25, title: "Mirror Run", description: "Guide mirrored runners through split-screen obstacles", category: "game", url: "https://dalecri.github.io/mirror-run/mirrorrun.html" },
             { id: 26, title: "Lasso.io", description: "Circle rivals and cut ropes in a western arena", category: "game", url: "https://dalecri.github.io/lassoio/lasso-io.html" },
             { id: 27, title: "Afterimage", description: "Trace a fading route from memory", category: "game", url: "https://dalecri.github.io/afterimage/afterimage.html" },
@@ -866,7 +866,7 @@
                 container.id = `card-${i}`;
                 container.href = p.url;
                 
-                const previewUrl = `https://api.microlink.io?url=${encodeURIComponent(p.url)}&screenshot=true&embed=screenshot.url`;
+                const previewUrl = p.preview || `https://api.microlink.io?url=${encodeURIComponent(p.url)}&screenshot=true&embed=screenshot.url`;
 
                 container.innerHTML = `
                     <div class="card-frame" style="container-type: inline-size;">
